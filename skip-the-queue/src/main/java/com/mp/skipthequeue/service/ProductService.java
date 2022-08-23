@@ -1,0 +1,19 @@
+package com.mp.skipthequeue.service;
+
+import com.mp.skipthequeue.entity.Product;
+import com.mp.skipthequeue.repository.ProductRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class ProductService {
+
+    @Autowired
+    private ProductRepository productRepository;
+
+    public Product saveProduct(Product product) {
+        return productRepository.save(product);
+    }
+}
